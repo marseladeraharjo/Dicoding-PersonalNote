@@ -6,6 +6,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  color: #202124;
 }
 
 .note-app__header {
@@ -28,13 +29,103 @@ textarea {
   background-color: transparent;
   border: 1px solid #aaa;
   border-radius: 25px;
-  margin: 12px 0;
+  margin: 10px 0;
   padding: 12px;
   color: white;
+}
+
+.note-app__body {
+  margin: 16px auto;
+  max-width: 1000px;
+  padding: 12px;
+}
+
+.note-app__body h2 {
+  font-weight: 400;
+  margin: 16px 0;
+}
+
+.note-list {
+  grid-gap: 16px;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(-webkit-min-content, -webkit-max-content);
+  grid-template-rows: minmax(min-content, max-content);
+  margin-bottom: 48px;
+}
+
+.note-item {
+  border: 2px solid #202124;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 3px 3px 1px #202124;
+}
+
+.note-item__content {
+  flex: 1 1;
+  padding: 12px;
+}
+
+.note-item__title {
+  margin-bottom: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.note-item__date {
+  color: #aaa;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.note-item__note {
+  font-size: 14px;
+}
+
+.note-item__action {
+  display: flex;
+}
+
+.note-item__delete-btn,
+.note-item__archive-btn {
+  background-color: transparent;
+  border: 0;
+  border-top: 1px solid #202124;
+  cursor: pointer;
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  padding: 8px 0;
+  width: 100%;
+}
+
+.note-item__delete-btn {
+  border-right: 1px solid #202124;
+  background-color: #ff5f52;
+  color: #202124;
+}
+
+.note-item__archive-btn {
+  background-color: #fff263;
+  color: #202124;
+}
+
+@media only screen and (min-width: 500px) {
+  .note-list {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media only screen and (min-width: 800px) {
   .note-search input {
     min-width: 400px;
+  }
+
+  .note-list {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
