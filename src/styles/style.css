@@ -24,11 +24,16 @@ body {
   margin: 8px 0;
 }
 
+.note-search input {
+  background-color: white;
+  color: #202124;
+}
+
 input,
 textarea {
   background-color: transparent;
-  border: 1px solid #aaa;
-  border-radius: 25px;
+  border: 1px solid #202124;
+  border-radius: 10px;
   margin: 10px 0;
   padding: 12px;
   color: white;
@@ -41,8 +46,59 @@ textarea {
 }
 
 .note-app__body h2 {
-  font-weight: 400;
+  font-weight: 700;
   margin: 16px 0;
+}
+
+.note-app__footer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.note-app__footer a {
+  text-decoration: none;
+  color: #8bd3dd;
+  font-weight: 700;
+}
+
+.note-input {
+  margin: 0 auto 48px;
+  max-width: 500px;
+}
+
+.note-input input,
+.note-input textarea {
+  display: block;
+  width: 100%;
+}
+
+.note-input__title-char-limit {
+  columns: #aaa;
+  font-size: 12px;
+  text-align: right;
+}
+
+.note-input__title {
+  font-weight: 700;
+}
+
+.note-input__body {
+  min-height: 175px;
+}
+
+.note-input button {
+  background-color: #8bd3dd;
+  border: 1px solid #202124;
+  border-radius: 10px;
+  color: #202124;
+  cursor: pointer;
+  display: block;
+  box-shadow: 0.4rem 0.4rem 0 #222;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  padding: 8px;
+  width: 100%;
 }
 
 .note-list {
@@ -56,12 +112,13 @@ textarea {
 }
 
 .note-item {
-  border: 2px solid #202124;
+  border: 1px solid #202124;
   border-radius: 10px;
+  background-color: #f2f7f5;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  box-shadow: 3px 3px 1px #202124;
+  box-shadow: 0.4rem 0.4rem 0 #222;
 }
 
 .note-item__content {
@@ -110,7 +167,7 @@ textarea {
 }
 
 .note-item__archive-btn {
-  background-color: #fff263;
+  background-color: #faae2b;
   color: #202124;
 }
 
