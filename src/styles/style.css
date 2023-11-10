@@ -17,6 +17,10 @@ body {
   align-items: center;
   border-bottom: 1px solid grey;
   padding: 10px 16px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 .note-app__header h1 {
@@ -37,7 +41,7 @@ textarea {
   border-radius: 10px;
   margin: 10px 0;
   padding: 12px;
-  color: white;
+  color: #202124;
 }
 
 .note-app__body {
@@ -81,7 +85,7 @@ textarea {
   border: 1px solid #202124;
   border-radius: 10px;
   padding: 12px;
-  box-shadow: 0.4rem 0.4rem 0 #222;
+  box-shadow: 0.5rem 0.5rem 0 #222;
 }
 
 .note-input__title-char-limit {
@@ -129,7 +133,7 @@ textarea {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  box-shadow: 0.4rem 0.4rem 0 #222;
+  box-shadow: 0.5rem 0.5rem 0 #222;
 }
 
 .note-item__content {
@@ -142,6 +146,7 @@ textarea {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-family: "Comfortaa", sans-serif;
 }
 
 .note-item__date {
