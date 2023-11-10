@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   color: #202124;
 }
 
@@ -21,6 +21,7 @@ body {
 
 .note-app__header h1 {
   flex: 1 1;
+  font-family: "Comfortaa", sans-serif;
   margin: 8px 0;
 }
 
@@ -40,7 +41,7 @@ textarea {
 }
 
 .note-app__body {
-  margin: 16px auto;
+  margin: 0 auto;
   max-width: 1000px;
   padding: 12px;
 }
@@ -48,6 +49,7 @@ textarea {
 .note-app__body h2 {
   font-weight: 700;
   margin: 16px 0;
+  font-family: "Comfortaa", sans-serif;
 }
 
 .note-app__footer {
@@ -71,6 +73,15 @@ textarea {
 .note-input textarea {
   display: block;
   width: 100%;
+  background-color: white;
+}
+
+.note-input form {
+  background-color: #f2f7f5;
+  border: 1px solid #202124;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0.4rem 0.4rem 0 #222;
 }
 
 .note-input__title-char-limit {
@@ -95,7 +106,7 @@ textarea {
   cursor: pointer;
   display: block;
   box-shadow: 0.4rem 0.4rem 0 #222;
-  font-family: "Roboto", sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 700;
   padding: 8px;
   width: 100%;
@@ -154,7 +165,7 @@ textarea {
   border-top: 1px solid #202124;
   cursor: pointer;
   display: block;
-  font-family: "Roboto", sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 700;
   padding: 8px 0;
   width: 100%;
