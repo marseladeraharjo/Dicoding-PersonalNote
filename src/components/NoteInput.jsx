@@ -6,11 +6,11 @@ class NoteInput extends React.Component {
 
     this.state = {
       title: "",
-      note: "",
+      body: "",
     };
 
     this.onTitleChangeEventHandler = this.onTitleChangeEventHandler.bind(this);
-    this.onNoteChangeEventHandler = this.onNoteChangeEventHandler.bind(this);
+    this.onBodyChangeEventHandler = this.onBodyChangeEventHandler.bind(this);
     this.onSubmitEventHandler = this.onSubmitEventHandler.bind(this);
   }
 
@@ -22,10 +22,10 @@ class NoteInput extends React.Component {
     });
   }
 
-  onNoteChangeEventHandler(event) {
+  onBodyChangeEventHandler(event) {
     this.setState(() => {
       return {
-        note: event.target.value,
+        body: event.target.value,
       };
     });
   }
@@ -42,7 +42,7 @@ class NoteInput extends React.Component {
         <form onSubmit={this.onSubmitEventHandler}>
           <p className="note-input__title-char-limit">Remaining characters: 50</p>
           <input type="text" className="note-input__title" value={this.state.title} onChange={this.onTitleChangeEventHandler} placeholder="Title..." />
-          <textarea cols="30" rows="10" className="note-input__body" value={this.state.note} onChange={this.onNoteChangeEventHandler} placeholder="Write your note here ..."></textarea>
+          <textarea cols="30" rows="10" className="note-input__body" value={this.state.body} onChange={this.onBodyChangeEventHandler} placeholder="Write your note here ..."></textarea>
           <button type="submit">Create</button>
         </form>
       </div>

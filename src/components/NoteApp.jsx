@@ -21,7 +21,7 @@ class NoteApp extends React.Component {
     this.setState({ notes });
   }
 
-  onAddNoteHandler({ title, note }) {
+  onAddNoteHandler({ title, body }) {
     this.setState((prevState) => {
       const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
       const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -41,8 +41,9 @@ class NoteApp extends React.Component {
           {
             id: +new Date(),
             title,
-            date: formattedDate,
-            note,
+            body,
+            archive: false,
+            createdAt: formattedDate,
           },
         ],
       };
