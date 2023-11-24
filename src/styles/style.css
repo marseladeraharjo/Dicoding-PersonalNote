@@ -59,7 +59,7 @@ textarea {
 .note-app__footer {
   display: flex;
   justify-content: center;
-  margin-bottom: 24px;
+  margin: 24px;
   font-family: "Comfortaa", sans-serif;
 }
 
@@ -129,7 +129,12 @@ textarea {
   grid-template-columns: 1fr;
   grid-template-rows: minmax(-webkit-min-content, -webkit-max-content);
   grid-template-rows: minmax(min-content, max-content);
-  margin-bottom: 48px;
+}
+
+.note-list__empty-message {
+  text-align: center;
+  font-size: 18px;
+  margin: 12px 0;
 }
 
 .note-item {
@@ -161,7 +166,7 @@ textarea {
   margin-bottom: 8px;
 }
 
-.note-item__note {
+.note-item__body {
   font-size: 14px;
 }
 
