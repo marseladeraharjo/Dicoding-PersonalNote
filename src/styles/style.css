@@ -59,7 +59,7 @@ textarea {
 .note-app__footer {
   display: flex;
   justify-content: center;
-  margin: 24px;
+  margin-bottom: 24px;
   font-family: "Comfortaa", sans-serif;
 }
 
@@ -129,12 +129,18 @@ textarea {
   grid-template-columns: 1fr;
   grid-template-rows: minmax(-webkit-min-content, -webkit-max-content);
   grid-template-rows: minmax(min-content, max-content);
+  margin-bottom: 28px;
 }
 
 .note-list__empty-message {
   text-align: center;
   font-size: 18px;
-  margin: 12px 0;
+  margin-bottom: 24px;
+  padding: 12px;
+  background-color: #f2f7f5;
+  box-shadow: 0.5rem 0.5rem 0 #222;
+  border: 1px solid #202124;
+  border-radius: 10px;
 }
 
 .note-item {

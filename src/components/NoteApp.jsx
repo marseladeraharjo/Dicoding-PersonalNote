@@ -1,8 +1,9 @@
 import React from "react";
 import { getData } from "../utils/data";
 import NoteList from "./NoteList";
-import NoteSearch from "./NoteSearch";
 import NoteInput from "./NoteInput";
+import Footer from "./Footer";
+import Header from "./Header";
 
 class NoteApp extends React.Component {
   constructor(props) {
@@ -41,10 +42,7 @@ class NoteApp extends React.Component {
   render() {
     return (
       <div className="note-app">
-        <div className="note-app__header">
-          <h1>notes.co</h1>
-          <NoteSearch />
-        </div>
+        <Header />
         <div className="note-app__body">
           <NoteInput addNote={this.onAddNoteHandler} />
           <h2>Active Notes</h2>
@@ -52,14 +50,7 @@ class NoteApp extends React.Component {
           <h2>Archive Notes</h2>
           <NoteList notes={this.state.notes} onDelete={this.onDeleteHandler} />
         </div>
-        <div className="note-app__footer">
-          <p>
-            Made by{" "}
-            <a href="https://github.com/marseladeraharjo" target="_blank" rel="noreferrer">
-              @marseladeraharjo
-            </a>
-          </p>
-        </div>
+        <Footer />
       </div>
     );
   }
