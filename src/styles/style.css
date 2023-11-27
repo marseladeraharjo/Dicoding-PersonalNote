@@ -201,10 +201,18 @@ textarea {
   color: #202124;
 }
 
+.note-item__delete-btn:hover {
+  background-color: #d44f43;
+}
+
 .note-item__archive-btn {
   border-right: 1px solid #202124;
   background-color: #faae2b;
   color: #202124;
+}
+
+.note-item__archive-btn:hover {
+  background-color: #dd9103;
 }
 
 @media only screen and (min-width: 500px) {

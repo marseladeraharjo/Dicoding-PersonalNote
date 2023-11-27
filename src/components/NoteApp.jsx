@@ -16,11 +16,22 @@ class NoteApp extends React.Component {
 
     this.onDeleteHandler = this.onDeleteHandler.bind(this);
     this.onAddNoteHandler = this.onAddNoteHandler.bind(this);
+    this.onArchiveHandler = this.onArchiveHandler.bind(this);
   }
 
   onDeleteHandler(id) {
     const notes = this.state.notes.filter((note) => note.id !== id);
     this.setState({ notes });
+  }
+
+  onArchiveHandler(id) {
+    const noteModify = this.state.notes.filter((note) => note.id === id)[0];
+    const archivedNote = { ...noteModify, archived: !noteModify.archived };
+    this.setState((prevState) => {
+      return {
+        notes: [...prevState.notes.filter((note) => note.id !== id), archivedNote],
+      };
+    });
   }
 
   onAddNoteHandler({ title, body }) {
@@ -47,9 +58,9 @@ class NoteApp extends React.Component {
         <div className="note-app__body">
           <NoteInput addNote={this.onAddNoteHandler} />
           <h2>Active Notes</h2>
-          <NoteList notes={this.state.notes} onDelete={this.onDeleteHandler} />
+          <NoteList notes={this.state.notes.filter((note) => note.archived === false)} onDelete={this.onDeleteHandler} onArchive={this.onArchiveHandler} />
           <h2>Archive Notes</h2>
-          <NoteList notes={this.state.notes} onDelete={this.onDeleteHandler} />
+          <NoteList notes={this.state.notes.filter((note) => note.archived === true)} onDelete={this.onDeleteHandler} onArchive={this.onArchiveHandler} />
         </div>
         <Footer />
       </div>
