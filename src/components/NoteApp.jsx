@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import { getData } from "../utils/data";
 import NoteList from "./NoteList";

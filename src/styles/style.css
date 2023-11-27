@@ -42,6 +42,7 @@ textarea {
   margin: 10px 0;
   padding: 12px;
   color: #202124;
+  font-size: 12px;
 }
 
 .note-app__body {
@@ -84,6 +85,7 @@ textarea {
   display: block;
   width: 100%;
   background-color: white;
+  font-family: "IBM Plex Mono", monospace;
 }
 
 .note-input form {
@@ -101,7 +103,7 @@ textarea {
 }
 
 .note-input__title {
-  font-weight: 700;
+  font-weight: bold;
 }
 
 .note-input__body {
@@ -118,6 +120,7 @@ textarea {
   box-shadow: 0.4rem 0.4rem 0 #222;
   font-family: "IBM Plex Mono", monospace;
   font-weight: 700;
+  font-size: 1rem;
   padding: 8px;
   width: 100%;
 }
@@ -194,12 +197,12 @@ textarea {
 }
 
 .note-item__delete-btn {
-  border-right: 1px solid #202124;
   background-color: #ff5f52;
   color: #202124;
 }
 
 .note-item__archive-btn {
+  border-right: 1px solid #202124;
   background-color: #faae2b;
   color: #202124;
 }

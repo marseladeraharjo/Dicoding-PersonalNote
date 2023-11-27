@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import NoteItemContent from "./NoteItemContent";
 import DeleteButton from "./DeleteButton";
@@ -8,8 +9,8 @@ function NoteItem({ title, createdAt, body, id, onDelete, onArchive }) {
     <div className="note-item">
       <NoteItemContent title={title} createdAt={createdAt} body={body} />
       <div className="note-item__action">
-        <DeleteButton id={id} onDelete={onDelete} />
         <ArchiveButton id={id} onArchive={onArchive} />
+        <DeleteButton id={id} onDelete={onDelete} />
       </div>
     </div>
   );
